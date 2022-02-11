@@ -36,7 +36,6 @@ app.post('/update-profile', function (req, res) {
   let userObj = req.body;
 
   MongoClient.connect(mongoUrlLocal, mongoClientOptions, function (err, client) {
-    //MongoClient.connect('mongodb://admin:password@localhost:27017', function (err, client) {
     if (err) throw err;
 
     let db = client.db(databaseName);
